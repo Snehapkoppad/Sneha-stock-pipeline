@@ -1,0 +1,29 @@
+[2025-09-08T01:21:44.520+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-09-08T01:21:44.586+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: print_sample_dataset.fetch_and_print_dataset scheduled__2025-09-07T00:00:00+00:00 [queued]>
+[2025-09-08T01:21:44.605+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: print_sample_dataset.fetch_and_print_dataset scheduled__2025-09-07T00:00:00+00:00 [queued]>
+[2025-09-08T01:21:44.606+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-09-08T01:21:44.641+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_and_print_dataset> on 2025-09-07 00:00:00+00:00
+[2025-09-08T01:21:44.651+0000] {standard_task_runner.py:63} INFO - Started process 352 to run task
+[2025-09-08T01:21:44.660+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'print_sample_dataset', 'fetch_and_print_dataset', 'scheduled__2025-09-07T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/stock_pipeline_dag.py', '--cfg-path', '/tmp/tmp93upvpa0']
+[2025-09-08T01:21:44.668+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask fetch_and_print_dataset
+[2025-09-08T01:21:44.804+0000] {task_command.py:426} INFO - Running <TaskInstance: print_sample_dataset.fetch_and_print_dataset scheduled__2025-09-07T00:00:00+00:00 [running]> on host d91fa3681b6d
+[2025-09-08T01:21:45.089+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='print_sample_dataset' AIRFLOW_CTX_TASK_ID='fetch_and_print_dataset' AIRFLOW_CTX_EXECUTION_DATE='2025-09-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-07T00:00:00+00:00'
+[2025-09-08T01:21:45.093+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-09-08T01:21:45.682+0000] {logging_mixin.py:188} INFO - Full JSON Response:
+[2025-09-08T01:21:45.684+0000] {logging_mixin.py:188} INFO - [{'userId': 1, 'id': 1, 'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit', 'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'}, {'userId': 1, 'id': 2, 'title': 'qui est esse', 'body': 'est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla'}, {'userId': 1, 'id': 3, 'title': 'ea molestias quasi exercitationem repellat qui ipsa sit aut', 'body': 'et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut'}, {'userId': 1, 'id': 4, 'title': 'eum et est occaecati', 'body': 'ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit'}, {'userId': 1, 'id': 5, 'title': 'nesciunt quas odio', 'body': 'repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque'}]
+[2025-09-08T01:21:45.705+0000] {logging_mixin.py:188} INFO - 
+DataFrame Preview (first 5 rows):
+[2025-09-08T01:21:45.818+0000] {logging_mixin.py:188} INFO -    userId  ...                                               body
+0       1  ...  quia et suscipit\nsuscipit recusandae consequu...
+1       1  ...  est rerum tempore vitae\nsequi sint nihil repr...
+2       1  ...  et iusto sed quo iure\nvoluptatem occaecati om...
+3       1  ...  ullam et saepe reiciendis voluptatem adipisci\...
+4       1  ...  repudiandae veniam quaerat sunt sed\nalias aut...
+
+[5 rows x 4 columns]
+[2025-09-08T01:21:45.826+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-09-08T01:21:45.833+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-09-08T01:21:45.875+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=print_sample_dataset, task_id=fetch_and_print_dataset, run_id=scheduled__2025-09-07T00:00:00+00:00, execution_date=20250907T000000, start_date=20250908T012144, end_date=20250908T012145
+[2025-09-08T01:21:45.966+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-09-08T01:21:46.039+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-08T01:21:46.053+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

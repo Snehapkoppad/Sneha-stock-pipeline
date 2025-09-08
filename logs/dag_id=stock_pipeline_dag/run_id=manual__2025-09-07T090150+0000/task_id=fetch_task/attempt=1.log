@@ -1,0 +1,21 @@
+[2025-09-07T09:19:12.565+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-09-07T09:19:12.723+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stock_pipeline_dag.fetch_task manual__2025-09-07T09:01:50+00:00 [queued]>
+[2025-09-07T09:19:12.748+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stock_pipeline_dag.fetch_task manual__2025-09-07T09:01:50+00:00 [queued]>
+[2025-09-07T09:19:12.749+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-09-07T09:19:12.797+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_task> on 2025-09-07 09:01:50+00:00
+[2025-09-07T09:19:12.807+0000] {standard_task_runner.py:63} INFO - Started process 917 to run task
+[2025-09-07T09:19:12.817+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'stock_pipeline_dag', 'fetch_task', 'manual__2025-09-07T09:01:50+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/stock_pipeline_dag.py', '--cfg-path', '/tmp/tmp3n1hpunr']
+[2025-09-07T09:19:12.823+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask fetch_task
+[2025-09-07T09:19:12.867+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-07T09:19:12.958+0000] {task_command.py:426} INFO - Running <TaskInstance: stock_pipeline_dag.fetch_task manual__2025-09-07T09:01:50+00:00 [running]> on host a7acc1f07525
+[2025-09-07T09:19:14.302+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stock_pipeline_dag' AIRFLOW_CTX_TASK_ID='fetch_task' AIRFLOW_CTX_EXECUTION_DATE='2025-09-07T09:01:50+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-07T09:01:50+00:00'
+[2025-09-07T09:19:14.304+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-09-07T09:19:15.670+0000] {logging_mixin.py:188} INFO - No data returned for IBM
+[2025-09-07T09:19:16.293+0000] {logging_mixin.py:188} INFO - No data returned for MSFT
+[2025-09-07T09:19:16.901+0000] {logging_mixin.py:188} INFO - No data returned for AAPL
+[2025-09-07T09:19:16.966+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-09-07T09:19:16.973+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-09-07T09:19:17.019+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=stock_pipeline_dag, task_id=fetch_task, run_id=manual__2025-09-07T09:01:50+00:00, execution_date=20250907T090150, start_date=20250907T091912, end_date=20250907T091917
+[2025-09-07T09:19:17.146+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-09-07T09:19:17.248+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-07T09:19:17.261+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

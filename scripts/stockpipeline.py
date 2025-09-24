@@ -1,4 +1,4 @@
-# scripts/stockpipeline.py
+
 import os
 import requests
 import psycopg2

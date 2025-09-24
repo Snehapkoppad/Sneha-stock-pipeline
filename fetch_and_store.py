@@ -7,7 +7,7 @@ def run():
     Fetch stock data from API and insert into PostgreSQL table.
     """
 
-    # Example API (replace with real stock API)
+    
     url = "https://dummyjson.com/products?limit=5"
     response = requests.get(url)
     if response.status_code != 200:
@@ -15,7 +15,7 @@ def run():
 
     data = response.json().get("products", [])
 
-    # Database connection settings (from environment variables)
+    
     db_host = os.getenv("POSTGRES_HOST", "postgres")
     db_name = os.getenv("POSTGRES_DB", "airflow")
     db_user = os.getenv("POSTGRES_USER", "airflow")
@@ -29,7 +29,7 @@ def run():
     )
     cur = conn.cursor()
 
-    # Create table if not exists
+    
     cur.execute("""
         CREATE TABLE IF NOT EXISTS stocks (
             id SERIAL PRIMARY KEY,
@@ -40,7 +40,6 @@ def run():
         )
     """)
 
-    # Insert each stock item
     for item in data:
         cur.execute("""
             INSERT INTO stocks (stock_id, title, price, brand)

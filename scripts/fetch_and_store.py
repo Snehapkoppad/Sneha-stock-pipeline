@@ -2,11 +2,11 @@ import requests
 import psycopg2
 from datetime import datetime
 
-# Alpha Vantage API URL
+
 URL = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo"
 
-# PostgreSQL config
-DB_HOST = "postgres"  # Use service name from docker-compose
+
+DB_HOST = "postgres"  
 DB_NAME = "stockdb"
 DB_USER = "airflow"
 DB_PASSWORD = "airflow"
@@ -14,7 +14,7 @@ DB_PASSWORD = "airflow"
 def fetch_data():
     print("Fetching stock data...")
     response = requests.get(URL)
-    response.raise_for_status()  # Raise error if request fails
+    response.raise_for_status()  
     data = response.json()
     return data["Time Series (5min)"]
 
@@ -25,7 +25,7 @@ def store_data(time_series):
     )
     cur = conn.cursor()
 
-    # Create table if not exists
+    
     cur.execute("""
         CREATE TABLE IF NOT EXISTS stock_data (
             timestamp TIMESTAMP PRIMARY KEY,
